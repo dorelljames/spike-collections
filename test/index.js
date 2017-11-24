@@ -88,11 +88,11 @@ test.cb('pagination', t => {
 
     t.is(
       page1.trim(),
-      '<pages>{"posts":[{"page":1,"path":"posts/p1.html","posts":[{"dingle":"snargle","_path":"posts/bar.html","_collection":"posts","permalink":"extra!"}]},{"page":2,"path":"posts/p2.html","posts":[{"wow":"amaze","_path":"posts/foo.html","_collection":"posts","permalink":"extra!"}]}]}</pages>\n<current>{"page":1,"path":"posts/p1.html","posts":[{"dingle":"snargle","_path":"posts/bar.html","_collection":"posts","permalink":"extra!"}]}</current>'
+      '<pages>{"posts":[{"page":1,"path":"posts/p1.html","posts":[{"dingle":"snargle","_path":"posts/bar.html","_collection":"posts","permalink":"extra!"}],"total":2},{"page":2,"path":"posts/p2.html","posts":[{"wow":"amaze","_path":"posts/foo.html","_collection":"posts","permalink":"extra!"}],"total":2}]}</pages>\n<current>{"page":1,"path":"posts/p1.html","posts":[{"dingle":"snargle","_path":"posts/bar.html","_collection":"posts","permalink":"extra!"}],"total":2}</current>'
     )
     t.is(
       page2.trim(),
-      '<pages>{"posts":[{"page":1,"path":"posts/p1.html","posts":[{"dingle":"snargle","_path":"posts/bar.html","_collection":"posts","permalink":"extra!"}]},{"page":2,"path":"posts/p2.html","posts":[{"wow":"amaze","_path":"posts/foo.html","_collection":"posts","permalink":"extra!"}]}]}</pages>\n<current>{"page":2,"path":"posts/p2.html","posts":[{"wow":"amaze","_path":"posts/foo.html","_collection":"posts","permalink":"extra!"}]}</current>'
+      '<pages>{"posts":[{"page":1,"path":"posts/p1.html","posts":[{"dingle":"snargle","_path":"posts/bar.html","_collection":"posts","permalink":"extra!"}],"total":2},{"page":2,"path":"posts/p2.html","posts":[{"wow":"amaze","_path":"posts/foo.html","_collection":"posts","permalink":"extra!"}],"total":2}]}</pages>\n<current>{"page":2,"path":"posts/p2.html","posts":[{"wow":"amaze","_path":"posts/foo.html","_collection":"posts","permalink":"extra!"}],"total":2}</current>'
     )
 
     // index is there and contains the right locals
